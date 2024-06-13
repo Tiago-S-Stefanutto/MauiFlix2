@@ -1,3 +1,6 @@
+using MauiFlix.Filmes.animacao;
+using MauiFlix.Filmes.aventura;
+
 namespace MauiFlix;
 
 public partial class aventura : ContentPage
@@ -7,9 +10,16 @@ public partial class aventura : ContentPage
 		InitializeComponent();
 	}
 
-    private void indianafilmbtn_Clicked(object sender, EventArgs e)
+    private void bntjumanji_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            Navigation.PushAsync(new jumanji());
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("OPS!!", ex.Message, "OK");
+        }
     }
 
     private void unchartedfilmbtn_Clicked(object sender, EventArgs e)

@@ -120,6 +120,9 @@
 	  <MauiXaml Update="Filmes\animacao\up.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Filmes\aventura\jumanji.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
