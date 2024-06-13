@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.acao"
+             Title="acao"
+             BackgroundColor="#2f2f30">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btnfilme" TargetType="ImageButton">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="300, 300, 300"
+                  ColumnDefinitions="*, *"
+                  Padding="5"
+                  ColumnSpacing="2"
+                  RowSpacing="2">
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="0"
+                             Style="{StaticResource btnfilme}"
+                             Source="vef.jpg" x:Name="btnmissao" 
+                             Clicked="btnmissao_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0"
+                             Style="{StaticResource btnfilme}"
+                             Source="borderlands.jpg" x:Name="btnjonh"
+                             Clicked="btnjonh_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1"
+                             Style="{StaticResource btnfilme}"
+                             Source="civilwar.jpg" x:Name="btnmad"
+                             Clicked="btnmad_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1"
+                             Style="{StaticResource btnfilme}"
+                             Source="needforspeed.jpg" x:Name="btntop"
+                             Clicked="btntop_Clicked"/>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

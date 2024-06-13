@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.aventura"
+             Title="aventura"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btnfilme" TargetType="ImageButton">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="300, 300, 300"
+                  ColumnDefinitions="*,*"
+                  Padding="5"
+                  RowSpacing="2"
+                  ColumnSpacing="2">
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="0" x:Name="indianafilmbtn"
+                             Style="{StaticResource btnfilme}"
+                             Source="indiana_jones.jpg"
+                             Clicked="indianafilmbtn_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0" x:Name="unchartedfilmbtn"
+                             Style="{StaticResource btnfilme}"
+                             Source="uncharted.jpg"
+                             Clicked="unchartedfilmbtn_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1" x:Name="tombfilmbtn"
+                             Style="{StaticResource btnfilme}"
+                             Source="tomb_raider.jpg"
+                             Clicked="tombfilmbtn_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1" x:Name="jurassicfilmbtn"
+                             Style="{StaticResource btnfilme}"
+                             Source="jurassic.jpg"
+                             Clicked="jurassicfilmbtn_Clicked"/>
+                
+                
+                
+                             
+                
+            </Grid>
+        </ScrollView>
+        
+    </VerticalStackLayout>
+</ContentPage>

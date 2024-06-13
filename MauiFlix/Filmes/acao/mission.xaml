@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.acao.mission"
+             Title="mission"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+             Source="https://www.youtube.com/watch?v=mXbfYYX0ZkI"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+                   Source="vef.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+                    <Label Text="Data de Lançamento:"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text=" 11 de agosto de 2006 "
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+
+
+                    <Label Text="Direção" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="Justin Lin"
+                       Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="Sinopse" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="Sean Boswell (Lucas Black) é um adolescente superficial e infeliz, que usa as corridas de rua como válvula de escape. Seu envolvimento irresponsável nas corridas fez com que Sean tivesse problemas com a polícia anteriormente. Após bater com o carro, e como forma de evitar a prisão, Sean é enviado para Tóquio, onde passa a morar com seu pai (Brian Goodman). Em sua nova cidade Sean fica inteiramente deslocado até conhecer Twinkie (Bow Wow), que lhe apresenta as corridas de drift. O drift é uma mistura de derrapagem e velocidade, que corre em circuitos bastante perigosos. Sean logo se empolga com a novidade, o que faz com que se envolva com os corredores locais."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.comedia"
+             Title="comedia"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ImageButton" x:Key="btnfilm">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="300,300,300"
+                  ColumnDefinitions="*,*"
+                  Padding="5"
+                  ColumnSpacing="2"
+                  RowSpacing="2">
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="0" x:Name="branquelasbtnfiml"
+                             Style="{StaticResource btnfilm}"
+                             Source="branquelas.jpg"
+                             Clicked="branquelasbtnfiml_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0" x:Name="gentebtnfiml"
+                             Style="{StaticResource btnfilm}"
+                             Source="gente_grande.jpg"
+                             Clicked="gentebtnfiml_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1" x:Name="vovozonabtnfiml"
+                             Style="{StaticResource btnfilm}"
+                             Source="vovozona.jpg"
+                             Clicked="vovozonabtnfiml_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1" x:Name="anjosbtnfiml"
+                             Style="{StaticResource btnfilm}"
+                             Source="anjos_lei.jpg"
+                             Clicked="anjosbtnfiml_Clicked"/>
+                
+
+            </Grid>
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.animacao.dragon"
+             Title="dragon"
+             BackgroundColor="Black">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+             Source="https://www.youtube.com/embed/2AKsAxrhqgM?si=vG7B3tB70sqYa6nO"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+                   Source="como_treinar_seu_dragao.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+                    <Label Text="Data de Lançamento:"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="26 de março de 2010"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+
+
+                    <Label Text="Direção" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text=" Dean DeBlois, Chris Sanders"
+                       Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="Sinopse" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="Soluço é um jovem viking que não tem capacidade para lutar contra os dragões, como é a tradição local. Sua vida muda quando ele ajuda um dragão que lhe mostra toda a verdade. Juntos, eles tentam provar que dragões e humanos podem ser amigos."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+
+
+</ContentPage>

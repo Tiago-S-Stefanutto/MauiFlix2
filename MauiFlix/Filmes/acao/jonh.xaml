@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.acao.jonh"
+             Title="jonh"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+             Source="https://www.youtube.com/embed/3OtwXTiygOM?si=CkKsiMZ3JS0K4JeN"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+                   Source="borderlands.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+                    <Label Text="Data de Lançamento:"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="  9 de agosto de 2024 "
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+
+
+                    <Label Text="Direção" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="Eli Roth"
+                       Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="Sinopse" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="Lilith, uma infame caçadora de recompensas com um passado misterioso, retorna para o lugar onde cresceu, Pandora, o planeta mais caótico da galáxia. Sua missão é encontrar a filha desaparecida de homem mais poderoso do universo, Atlas."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

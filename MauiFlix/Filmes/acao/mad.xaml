@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.acao.mad"
+             Title="mad"
+             Background="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+         Source="https://www.youtube.com/watch?v=--h_vIA5WwU"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+               Source="civilwar.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                     Grid.Column="1" Grid.Row="0">
+                    <Label Text="Data de Lançamento:"
+                   Style="{StaticResource titulo}"/>
+                    <Label Text="18 de abril de 2024"
+                   Style="{StaticResource textoTitulo}"
+                   TextColor="White"/>
+
+
+                    <Label Text="Direção" Margin="0, 20, 0, 0"
+                   Style="{StaticResource titulo}"/>
+                    <Label Text="Alex Garland"
+                   Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="Sinopse" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="Em Guerra Civil, um grupo pioneiro de jornalistas de guerra é enviado para registrar o cenário violento que tomou conta dos Estados Unidos após uma guerra civil eclodir. Conforme o confronto se intensifica, eles acabam se tornando alvos em meio a um embate entre as forças armadas, civis e a Casa Branca."
+                   TextColor="White"
+                   FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>
