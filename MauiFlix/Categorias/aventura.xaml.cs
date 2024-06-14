@@ -22,18 +22,39 @@ public partial class aventura : ContentPage
         }
     }
 
-    private void unchartedfilmbtn_Clicked(object sender, EventArgs e)
+    private void bntuncharted_Cliked(object sender, EventArgs e)
     {
-
+        try
+        {
+            Navigation.PushAsync(new uncharted());
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("OPS!!", ex.Message, "OK");
+        }
     }
 
-    private void tombfilmbtn_Clicked(object sender, EventArgs e)
+    private void bntsenhorda_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            Navigation.PushAsync(new SdA());
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("OPS!!", ex.Message, "OK");
+        }
     }
 
-    private void jurassicfilmbtn_Clicked(object sender, EventArgs e)
+    private void bntviagem_Clicked(object sender, EventArgs e)
     {
-
+        try
+        {
+            Navigation.PushAsync(new viagem());
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("OPS!!", ex.Message, "OK");
+        }
     }
 }

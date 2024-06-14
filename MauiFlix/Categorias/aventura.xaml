@@ -25,18 +25,18 @@
                              Style="{StaticResource btnfilme}"
                              Source="jumanji.jpg"
                              Clicked="bntjumanji_Clicked"/>
-                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0" x:Name="unchartedfilmbtn"
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0" x:Name="bntuncharted"
                              Style="{StaticResource btnfilme}"
                              Source="uncharted.jpg"
-                             Clicked="unchartedfilmbtn_Clicked"/>
-                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1" x:Name="tombfilmbtn"
+                             Clicked="bntuncharted_Cliked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1" x:Name="bntsenhorda"
                              Style="{StaticResource btnfilme}"
-                             Source="tomb_raider.jpg"
-                             Clicked="tombfilmbtn_Clicked"/>
-                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1" x:Name="jurassicfilmbtn"
+                             Source="senhorda.jpg"
+                             Clicked="bntsenhorda_Clicked"/>
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1" x:Name="bntviagem"
                              Style="{StaticResource btnfilme}"
-                             Source="jurassic.jpg"
-                             Clicked="jurassicfilmbtn_Clicked"/>
+                             Source="viagemaocentro.jpg"
+                             Clicked="bntviagem_Clicked"/>
                 
                 
                 
